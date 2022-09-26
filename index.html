@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <!-- Meta Settings -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Website Pessoal">
+  <meta name="author" content="Gustavo Rodrigues Martins">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Title -->
+  <title>Início | Gustavo</title>
+
+  <!-- Stylesheets, Favicon, & Font -->
+  <link rel="shortcut icon" href="assets/img/favicon.jpg" />
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/grid.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header>
+    <a class="logo" href="index.html">Gustavo</a>
+    <nav id="navbar">
+      <ul class="nav__links">
+        <li><a href="index.html" class="active">Início</a></li>
+        <li><a href="about.html">Sobre</a></li>
+        <li><a href="projects.html">Projetos</a></li>
+      </ul>
+    </nav>
+    <p class="menu cta">Menu</p>
+    <i class="fa-solid fa-moon" id="dark-mode-toggle"></i>
+  </header>
+  <div id="mobile__menu" class="overlay">
+    <a class="close">&times;</a>
+    <div class="overlay__content">
+      <a href="index.html">Início</a>
+      <a href="about.html">Sobre</a>
+      <a href="projects.html">Projetos</a>
+    </div>
+  </div>
+  <!-- Home -->
+  <section class="container-fluid" id="home">
+    <div class="container hero">
+      <div class="row">
+        <div class="col-md-8 d-flex flex-column justify-content-center">
+          <p class="fs-6" id="hour"></p>
+          <h1 class="fw-bold">Gustavo Rodrigues Martins</h1>
+          <p class="fs-7">Sou <span class="typing"></span></p>
+          <div class="button flex-wrap">
+            <a href="assets/docs/curriculo.pdf" download="Gustavo Rodrigues.pdf" target="_blank"
+              class="btn btn-outline-danger">Download C.V</a>
+              <a href="about.html" class="btn btn-primary">Sobre mim</a>
+          </div>
+        </div>
+        <div class="desktop col-md-4 image d-grid justify-content-center">
+          <img src="assets/img/picture.jpg" class="img-fluid gustavo" alt="picture__home">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Scripts -->
+  <script type="text/javascript" src="assets/js/menu.js"></script>
+  <script type="text/javascript" src="assets/js/theme.js"></script>
+  <script defer type="text/javascript" src="assets/js/scripts.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js" referrerpolicy="no-referrer"></script>
+  <script src="https://kit.fontawesome.com/b0fb843c1f.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,450 @@
+/*==============================================================================================*/
+/*===================Copyright Gustavo Rodrigues Martins. All rights reserved.==================*/
+/*==============================================================================================*/
+
+/*========================================Global Settings=======================================*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 97px;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --bg-primary: #fff;
+  --bg-secondary: #f0f0f0;
+  --primary-color: #bb3030;
+  --primary-color-hover: #c75959;
+  --title-color: #24252a;
+  --icon: black;
+}
+
+.darkmode {
+  --bg-primary: #111;
+  --bg-secondary: #161616;
+  --primary-color: #bb3030;
+  --primary-color-hover: #c75959;
+  --title-color: #fff;
+  --icon: #fff;
+}
+
+body {
+  background-color: var(--bg-primary);
+}
+
+img {
+  user-select: none;
+}
+
+section {
+  margin-top: 6%;
+  margin-bottom: 1%;
+  animation: fade .5s ease
+}
+
+@keyframes fade {
+  from {
+      opacity: .4;
+      transform: translateY(10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+h1,
+h2,
+p {
+  color: var(--title-color);
+}
+
+p {
+  font-weight: 400;
+}
+
+h3,
+h4,
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+.h1__class {
+  text-align: center;
+  font-weight: 600;
+  font-size: 40px;
+}
+
+/*=====================================================================================*/
+
+/*================================Navbar & Media Queries===============================*/
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 30px 10%;
+  background-color: var(--bg-primary);
+}
+
+.logo {
+  color: var(--title-color);
+  text-decoration: none;
+  margin-right: auto;
+  font-size: 26px;
+  user-select: none;
+  cursor: pointer;
+}
+
+.nav__links a,
+.cta,
+.overlay__content a {
+  font-weight: 500;
+  color: var(--title-color);
+  text-decoration: none;
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+}
+
+.nav__links li {
+  padding: 0px 20px;
+  user-select: none;
+}
+
+.nav__links li .active {
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+  width: 100%;
+  border-radius: 2px;
+  transition: color .3s ease;
+}
+
+.nav__links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+  color: var(--primary-color-hover);
+}
+
+.cta {
+  color: #fff;
+  margin-left: 20px;
+  padding: 9px 25px;
+  background-color: var(--primary-color);
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.3s ease 0s;
+}
+
+.cta:hover {
+  background-color: var(--primary-color-hover);
+  transition: 500ms;
+}
+
+.menu {
+  display: none;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: var(--bg-primary);
+  overflow-x: hidden;
+  transition: all 0.5s ease 0s;
+}
+
+.overlay--active {
+  width: 100%;
+}
+
+.overlay__content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay a {
+  font-size: 30px;
+  display: block;
+  transition: color 0.3s ease 0s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: var(--primary-color-hover)
+}
+
+.overlay .close {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  color: var(--title-color);
+  cursor: pointer;
+}
+
+@media screen and (max-height: 653px) {
+  .overlay a {
+    font-size: 20px;
+  }
+
+  .overlay .close {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container-fluid .gustavo {
+    display: none;
+  }
+
+  .grow {
+    display: none;
+  }
+
+  .logo {
+    font-size: 20px;
+    margin-bottom: 2%;
+  }
+  section {
+    margin-top: 10%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .nav__links,
+  .cta {
+    display: none;
+  }
+
+  .logo {
+    font-size: 20px;
+    margin-bottom: 1%;
+  }
+
+  .menu {
+    display: initial;
+  }
+
+  header i {
+    margin-left: 1.5%;
+    margin-bottom: 1.5%;
+  }
+}
+
+header i {
+  color: var(--icon);
+  cursor: pointer;
+  font-size: 1.5em;
+}
+
+/*=====================================================================================*/
+
+/*========================================Home=========================================*/
+#hour {
+  font-weight: bold;
+}
+
+.gustavo {
+  width: 500px;
+  border-radius: 20px;
+}
+
+.container-fluid .gustavo {
+  transform: translateY(0px);
+  animation: floatY 5s ease-in-out infinite;
+}
+
+@keyframes floatY {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-30px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.typing {
+  color: var(--primary-color-hover);
+}
+
+/*====================================================================================*/
+
+/*========================================About=======================================*/
+.card {
+  box-shadow: 20px 20px 50px -30px var(--primary-color);
+  border: none;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.fonts {
+  font-size: 14px;
+}
+
+.languages-list {
+  margin-top: 0;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  padding: 0;
+}
+
+.languages-list li {
+  padding: 5px;
+  color: var(--primary-color);
+  font-size: 25px;
+}
+
+.social-list {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  padding: 0;
+}
+
+.social-list li {
+  padding: 5px;
+  color: var(--primary-color);
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.social-list li i:hover {
+  color: var(--primary-color-hover);
+  transform: scale(1.1);
+  transition: .2s ease-in-out;
+}
+
+span {
+  color: var(--title-color);
+}
+
+/*======================================================================================*/
+
+/*========================================Projects======================================*/
+main.cards {
+  display: flex;
+  padding: 150px;
+}
+
+span {
+  color: var(--title-color);
+}
+
+main.cards section.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: var(--bg-secondary);
+  padding: 1rem 1.5rem;
+  border-radius: 30px;
+  max-height: 468px;
+  margin-left: 32px;
+}
+
+main.cards section.cards:first-child {
+  margin-left: 0;
+}
+
+main.cards section.cards .icon {
+  width: 64px;
+  height: 64px;
+}
+
+main.cards section.cards img {
+  width: 100%;
+}
+
+main.cards section.cards h3 {
+  font-size: 100%;
+  margin: 16px 0;
+}
+
+main.cards section.cards span {
+  font-weight: 300;
+  max-width: 240px;
+  font-size: 80%;
+  margin-bottom: 16px;
+}
+
+main.cards section.cards button {
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  border-radius: 32px;
+  border: 0;
+  cursor: pointer;
+  font-size: 80%;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 16px 0;
+}
+
+main.cards section.cards.projects button {
+  background: linear-gradient(to right, var(--primary-color), var(--primary-color-hover));
+}
+
+main.cards section.cards.projects button:hover {
+  transform: scale(1.1);
+}
+
+main.cards section.cards.projects {
+  box-shadow: 20px 20px 50px -30px var(--primary-color);
+}
+
+@media screen and (max-width: 720px) {
+  main.cards {
+    flex-direction: column;
+    padding: 16px;
+    margin-right: 0;
+  }
+
+  main.cards section.cards {
+    margin-left: 0;
+    margin-bottom: 32px;
+  }
+
+  main.cards section.cards:last-child {
+    margin-bottom: 0;
+  }
+
+  main.cards section.cards button {
+    font-size: 70%;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  main.cards {
+    flex-direction: column;
+    padding: 32px;
+  }
+}
+
+/*======================================================================================*/
