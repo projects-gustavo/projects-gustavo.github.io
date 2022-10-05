@@ -8,8 +8,8 @@ if (hour >= 0 && hour < 12)
 if (hour >= 12 && hour < 18)
     p.innerText = "Boa tarde! Meu Nome é";
 
-var typed = new Typed (".typing",{
-    strings: ["desenvolvedor front-end","desenvolvedor web","designer","amante da música","amante da tecnologia"],
+var typed = new Typed(".typing", {
+    strings: ["desenvolvedor front-end", "desenvolvedor web", "designer", "amante da música", "amante da tecnologia"],
     typeSpeed: 100,
     BackSpeed: 60,
     loop: true

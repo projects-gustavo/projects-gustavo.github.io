@@ -94,10 +94,11 @@ header {
 }
 
 .logo {
-  color: var(--title-color);
+  color: var(--primary-color);
   text-decoration: none;
   margin-right: auto;
   font-size: 26px;
+  font-weight: 600;
   user-select: none;
   cursor: pointer;
 }
@@ -307,20 +308,6 @@ header i {
 
 .fonts {
   font-size: 14px;
-}
-
-.languages-list {
-  margin-top: 0;
-  display: flex;
-  list-style: none;
-  justify-content: center;
-  padding: 0;
-}
-
-.languages-list li {
-  padding: 5px;
-  color: var(--primary-color);
-  font-size: 25px;
 }
 
 .social-list {
