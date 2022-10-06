@@ -358,6 +358,11 @@ main.cards section.cards {
   margin-left: 32px;
 }
 
+main.cards section.cards:hover {
+  transform: translateY(-4px);
+  transition: .25s ease;
+}
+
 main.cards section.cards:first-child {
   margin-left: 0;
 }
