@@ -326,7 +326,6 @@ header i {
 
 .social-list li i:hover {
   color: var(--primary-color-hover);
-  transform: scale(1.1);
   transition: .2s ease-in-out;
 }
 
@@ -402,10 +401,6 @@ main.cards section.cards button {
 
 main.cards section.cards.projects button {
   background: linear-gradient(to right, var(--primary-color), var(--primary-color-hover));
-}
-
-main.cards section.cards.projects button:hover {
-  transform: scale(1.1);
 }
 
 main.cards section.cards.projects {
