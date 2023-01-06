@@ -8,5 +8,5 @@
     <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" />
 </div>
 
-<h3 align="center">Licença 🚫</h3>
-<p align="center">© Gustavo Rodrigues Martins. Todos direitos reservados</p>
+<h3 align="center">License 🚫</h3>
+<p align="center">© Gustavo Rodrigues Martins. All rights reserved.</p>
